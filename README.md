@@ -1,31 +1,63 @@
-# CGIH12 🎨💻
+# Proyecto OpenGL - Triángulo Básico
 
-**Autora:** Dulce Coral Rodriguez Garcia 👩‍💻
+Este es un proyecto de OpenGL en C++ que muestra un triángulo básico en pantalla usando GLEW y GLFW.
 
-Este repositorio corresponde a la materia de **Computación Gráfica e Interacción Humano Computadora** Grupo _12_.  
-El propósito principal es servir como base para la entrega y evaluación de los laboratorios y prácticas desarrollados durante el curso.
+## Descripción
 
-## Estructura del repositorio 📂
+Es la práctica 0 en donde vimos:
+- Inicialización de OpenGL con GLFW
+- Uso de GLEW para cargar extensiones de OpenGL
+- Renderizado de geometría básica
 
-- El proyecto raíz contiene únicamente la documentación y referencias generales.
-- Cada práctica se encuentra en un branch independiente, siguiendo la nomenclatura:
-  - `practica-0` → Práctica 0
-  - `practica-1` → Práctica 1
-  - `practica-2` → Práctica 2
-  - ... y así sucesivamente.
+## Requisitos del Sistema
 
-Para revisar el código y los archivos de cada práctica, es necesario cambiar al branch correspondiente.
+- macOS con Xcode Command Line Tools
+- Homebrew
+- OpenGL (incluido en macOS)
+- GLFW (para manejo de ventanas)
+- GLEW (para extensiones de OpenGL)
 
-## Instrucciones de uso 🛠️
+## Instalación
 
-1. Clona el repositorio.
-2. Cambia al branch de la práctica que deseas revisar:
+1. **Instalar dependencias** (si no están instaladas):
    ```bash
-   git checkout practica-0
+   make install-deps
    ```
-   (Reemplaza `practica-0` por el branch deseado).
 
-## Notas 📝
+2. **Compilar el proyecto**:
+   ```bash
+   make
+   ```
 
-- El branch principal (`main`) solo contiene información general y no incluye código de las prácticas.
-- Cada branch está organizado para facilitar la revisión y calificación por parte del docente.
+## Uso
+
+Para ejecutar la aplicación:
+```bash
+make run
+```
+
+O ejecutar directamente:
+```bash
+./opengl_app
+```
+
+## Comandos Disponibles
+
+- `make` - Compilar el proyecto
+- `make run` - Compilar y ejecutar el proyecto
+- `make clean` - Limpiar archivos compilados
+- `make install-deps` - Instalar dependencias con Homebrew
+- `make help` - Mostrar ayuda con todos los comandos
+
+## Estructura del Proyecto
+
+```
+CGIH12-master/
+├── configInicial/
+│   ├── Main.cpp              # Código fuente principal
+│   ├── glew32.dll           # DLL de GLEW para Windows (no usado en macOS)
+│   └── [archivos VS]        # Archivos de Visual Studio (no usados en macOS)
+├── Makefile                 # Sistema de build para macOS
+└── README.md               # Este archivo
+```
+
